@@ -59,6 +59,7 @@
         <a-asset-item id="moon" src="models/moon/scene.gltf"></a-asset-item>
         <a-asset-item id="cauldron" src="models/cauldron/scene.gltf"></a-asset-item>
         <a-asset-item id="rock1" src="models/rock1/scene.gltf"></a-asset-item>
+        <a-asset-item id="miku" src="models/miku/scene.gltf"></a-asset-item>
     </a-assets>
 
     <a-entity camera look-controls position="0 1.5 0">
@@ -81,10 +82,11 @@
               dynamic-body="shape:sphere; sphereRadius: 0.3; mass:4"
     >
         <a-entity id='imp-model' gltf-model="#imp"
-	              position="0 -0.3 0"
+                  position="0 -0.3 0"
+                  scale="0.2 0.2 0.2"
                   sound="src: url(./audio/gah.mp3); autoplay: false; loop: false;"></a-entity>
-        <a-sphere id='egg-model' radius="0.25" segments-height="8" segments-width="8"
-                  scale="1 0.6 0.8"
+        <a-sphere id='egg-model' gltf-model="#miku"
+                  scale="0.2 0.2 0.2"
                   material="color: purple; flatShading:true; emissive:red; emissiveIntensity:0.2"
                   sound="src: url(./audio/cowbell.mp3); autoplay: false; loop: false;"
         ></a-sphere>
